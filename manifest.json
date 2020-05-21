@@ -1,6 +1,6 @@
 {
-  "name": "tixCraft Support",
-  "description": "購票輔助程式",
+  "name": "pchome Support",
+  "description": "買買輔助程式",
   "version": "1.4.2",
   "permissions": [ "activeTab", "storage" ],
   "background": {
@@ -10,34 +10,14 @@
     ]
   },
   "browser_action": {
-    "default_title": "購票輔助"
+    "default_title": "買買輔助程式"
   },
   "options_page": "options.html",
   "content_scripts" : [
     {
-      "matches" : [ "https://tixcraft.com/ticket/ticket/*" ],
+      "matches" : [ "https://24h.pchome.com.tw/prod/*" ],
       "run_at": "document_end",
-      "js" : [ "jquery.min.js", "js/ticket.js" ]
-    },
-    {
-      "matches" : [ "https://tixcraft.com/activity/game/*" ],
-      "run_at": "document_end",
-      "js" : [ "jquery.min.js", "js/game.js" ]
-    },
-    {
-      "matches" : [ "https://tixcraft.com/ticket/area/*" ],
-      "run_at": "document_end",
-      "js" : [ "jquery.min.js", "js/area.js" ]
-    },
-    {
-      "matches" : [ "https://tixcraft.com/activity/detail/*" ],
-      "run_at": "document_end",
-      "js" : [ "jquery.min.js", "js/detail.js" ]
-    },
-    {
-      "matches" : [ "https://tixcraft.com/ticket/verify/*" ],
-      "run_at": "document_end",
-      "js" : [ "jquery.min.js", "js/verify.js" ]
+      "js" : [ "jquery.min.js", "js/prod.js" ]
     }
   ],
   "manifest_version": 2
