@@ -1,7 +1,7 @@
 {
   "name": "pchome Support",
   "description": "買買輔助程式",
-  "version": "1.4.2",
+  "version": "1.0.0",
   "permissions": [ "activeTab", "storage" ],
   "background": {
     "scripts": [
@@ -18,6 +18,16 @@
       "matches" : [ "https://24h.pchome.com.tw/prod/*" ],
       "run_at": "document_end",
       "js" : [ "jquery.min.js", "js/prod.js" ]
+    },
+    {
+      "matches" : [ "https://ecssl.pchome.com.tw/sys/cflow/*" ],
+      "run_at": "document_end",
+      "js" : [ "jquery.min.js", "js/cart.js" ]
+    },
+    {
+      "matches" : [ "https://ecssl.pchome.com.tw/sys/cflowex/*" ],
+      "run_at": "document_end",
+      "js" : [ "jquery.min.js", "js/pay.js" ]
     }
   ],
   "manifest_version": 2
